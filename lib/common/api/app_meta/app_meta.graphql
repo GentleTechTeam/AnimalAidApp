@@ -1,0 +1,6 @@
+query AppMeta {
+    appMeta {
+        privacyPolicyUrl
+        supportEmail
+    }
+}

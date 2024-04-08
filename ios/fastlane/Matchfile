@@ -1,0 +1,14 @@
+storage_mode("git")
+git_url("git@git.gentletech.net:animal-aid-app/animal-aid-app-ios-secrets.git")
+git_private_key("fastlane/match-access-to-animal-aid-app-ios-secrets-repo.rsa")
+git_branch("main")
+readonly(true)
+clone_branch_directly(true)
+
+type("development") # The default type, can be: appstore, adhoc, enterprise or development
+api_key_path("fastlane/gitlab_ci_fastlane_gentletech_api_key.json")
+app_identifier("com.gentletech.animalaidapp")
+team_id("WSJAJHQ3")
+team_name("Gentle Tech")
+
+# The docs are available on https://docs.fastlane.tools/actions/match

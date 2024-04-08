@@ -1,0 +1,18 @@
+gradle-wrapper.jar
+/.gradle
+/captures/
+/gradlew
+/gradlew.bat
+/local.properties
+GeneratedPluginRegistrant.java
+
+# Private data related
+# Remember to never publicly share your keystore.
+# See https://flutter.dev/docs/deployment/android#reference-the-keystore-from-the-app
+key.properties
+# service account api key
+pc-api-8001975366575556685-777-9b62e1d6741a.json
+
+# Fastlane related
+fastlane/README.md
+fastlane/report.xml

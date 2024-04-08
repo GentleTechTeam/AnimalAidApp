@@ -1,0 +1,3 @@
+mutation ReportPostConcern($token: String!, $groupId: String!, $postId: String!) {
+    reportPostConcern(token: $token, groupId: $groupId, postId: $postId)
+}

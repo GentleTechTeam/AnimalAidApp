@@ -1,0 +1,11 @@
+query GroupPostsAutoImportEnabledStatus($token: String!, $groupId: String!) {
+    groupPostsAutoImportEnabledStatus(token: $token, groupId: $groupId)
+}
+
+mutation EnableGroupPostsAutoImport($token: String!, $groupId: String!) {
+    enableGroupPostsAutoImport(token: $token, groupId: $groupId)
+}
+
+query GroupPostsAutoImportHint {
+    groupPostsAutoImportHint
+}

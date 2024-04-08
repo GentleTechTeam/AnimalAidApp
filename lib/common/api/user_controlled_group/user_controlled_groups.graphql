@@ -1,0 +1,32 @@
+query UserControlledGroups($token: String!, $approvalStatus: CharityGroupApprovalStatus) {
+    userControlledGroups(token: $token, approvalStatus: $approvalStatus ) {
+        id
+        name
+        groupPhotoUrl
+        approvalStatus
+        locationLabel
+        autoImportSettingsAccessible
+    }
+}
+
+mutation RequestUserGroupApproval($token: String!, $groupId: String!) {
+    requestUserControlledGroupApproval(token: $token, groupId: $groupId) {
+        id
+        name
+        groupPhotoUrl
+        approvalStatus
+        locationLabel
+        autoImportSettingsAccessible
+    }
+}
+
+mutation ChangeUserGroupLocation($token: String!, $groupId: String!, $locationKey: String) {
+    changeUserControlledGroupLocation(token: $token, groupId: $groupId, locationKey: $locationKey) {
+        id
+        name
+        groupPhotoUrl
+        approvalStatus
+        locationLabel
+        autoImportSettingsAccessible
+    }
+}

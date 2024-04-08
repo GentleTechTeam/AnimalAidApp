@@ -1,0 +1,198 @@
+"""Exposes a URL that specifies the behaviour of this scalar."""
+directive @specifiedBy(
+  """The URL that specifies the behaviour of this scalar."""
+  url: String!
+) on SCALAR
+
+type AppMeta {
+  privacyPolicyUrl: String!
+  supportEmail: String!
+}
+
+type CharityGroup implements GroupInterface & Entity {
+  """Unique identifier for the entity"""
+  id: ID!
+  name: String!
+  groupPhotoUrl: String!
+  groupUrl: String!
+  approvalStatus: CharityGroupApprovalStatus!
+  locationLabel: String
+  autoImportSettingsAccessible: Boolean!
+}
+
+enum CharityGroupApprovalStatus {
+  NONE
+  PENDING
+  APPROVED
+  DECLINED
+}
+
+interface Entity {
+  """Unique identifier for the entity"""
+  id: ID!
+}
+
+input GeoPositionInput {
+  latitude: Float!
+  longitude: Float!
+}
+
+type Group implements GroupInterface & Entity {
+  """Unique identifier for the entity"""
+  id: ID!
+  name: String!
+  groupPhotoUrl: String!
+  groupUrl: String!
+}
+
+interface GroupInterface {
+  """Unique identifier for the entity"""
+  id: ID!
+  name: String!
+  groupPhotoUrl: String!
+  groupUrl: String!
+}
+
+type GroupPost implements PostInterface & Entity {
+  """Unique identifier for the entity"""
+  id: ID!
+  description: String
+  creationDate: String!
+  photoAttachmentUrls: [String]!
+  published: Boolean!
+  assignedTags: [String]!
+}
+
+type GroupPostsData {
+  hasMoreItems: Boolean!
+  items: [GroupPost]!
+}
+
+type Location {
+  label: String!
+  key: String!
+  keyType: String!
+}
+
+input LocationDataInput {
+  label: String!
+  key: String!
+  keyType: String!
+}
+
+type MainTagGroup {
+  id: String!
+  label: String!
+  tagKeys: [String]!
+}
+
+type MobileClientMeta {
+  isActual: Boolean!
+  clientUpdateUrlIos: String!
+  clientUpdateUrlAndroid: String!
+}
+
+type Mutation {
+  requestUserControlledGroupApproval(token: String!, groupId: String!): CharityGroup
+
+  """
+  Modifies location key of target group. Empty location key removes location data from group
+  """
+  changeUserControlledGroupLocation(token: String!, groupId: String!, locationKey: String): CharityGroup
+  makeCharityGroupApprovalDecision(token: String!, groupId: String!, approve: Boolean!): Boolean
+  togglePostsInFeed(token: String!, payload: [TogglePostsInFeedPayload]!): Boolean!
+  assignTagToApprovedPost(token: String!, groupId: String!, postId: String!, tag: String!): GroupPost!
+  deleteTagFromApprovedPost(token: String!, groupId: String!, postId: String!, tag: String!): GroupPost!
+  reportPostConcern(token: String!, groupId: String!, postId: String!): Boolean!
+  enableGroupPostsAutoImport(token: String!, groupId: String!): Boolean!
+}
+
+type Post implements PostInterface & Entity {
+  """Unique identifier for the entity"""
+  id: ID!
+  description: String
+  creationDate: String!
+  photoAttachmentUrls: [String]!
+}
+
+type PostFeedItem implements PostInterface & Entity {
+  """Unique identifier for the entity"""
+  id: ID!
+  description: String
+  creationDate: String!
+  photoAttachmentUrls: [String]!
+  group: Group!
+  url: String!
+}
+
+interface PostInterface {
+  """Unique identifier for the entity"""
+  id: ID!
+  description: String
+  creationDate: String!
+  photoAttachmentUrls: [String]!
+}
+
+type PostsFeedData {
+  hasMoreItems: Boolean!
+  items: [PostFeedItem]!
+}
+
+type Query {
+  postsFeed(
+    """iso date string"""
+    fromDate: String
+
+    """maximum 20 items, which is default"""
+    first: Int
+    tagKeys: [String]
+    tagGroupIds: [String]
+    locationKey: String
+  ): PostsFeedData!
+  postsFeedItem(
+    """post group id"""
+    groupId: String!
+
+    """post id"""
+    postId: String!
+  ): PostFeedItem
+  userControlledGroups(token: String!, approvalStatus: CharityGroupApprovalStatus): [CharityGroup]!
+  charityGroupsWaitingForApproval(token: String!): [CharityGroup]!
+  groupPosts(token: String!, groupId: String!, skip: Int, first: Int): GroupPostsData!
+  mainTagGroups: [MainTagGroup]!
+  appMeta: AppMeta!
+  userMeta(token: String!): UserMeta!
+  locationData(latitude: Float!, longitude: Float!): Location!
+
+  """
+  Method responsible for validating location data and generating new one using
+  position data, if current one becomes deprecated.
+   Returns null, if validation was not passed and position data could not be refreshed
+  """
+  refreshedLocationData(payload: RefreshLocationPayload!): Location
+  locations(query: String!): [Location]!
+  groupPostsAutoImportEnabledStatus(token: String!, groupId: String!): Boolean!
+  groupPostsAutoImportHint: String!
+  mobileClientMeta(
+    """App version. F.e. 0.1.1"""
+    version: String!
+  ): MobileClientMeta!
+}
+
+input RefreshLocationPayload {
+  position: GeoPositionInput
+  currentLocationData: LocationDataInput!
+}
+
+input TogglePostsInFeedPayload {
+  groupId: String!
+  postId: String!
+  enabled: Boolean!
+}
+
+type UserMeta {
+  firstName: String!
+  lastName: String!
+  photoUrl: String!
+  isAdmin: Boolean!
+}

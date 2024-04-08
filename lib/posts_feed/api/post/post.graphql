@@ -1,0 +1,17 @@
+query PostsFeed($tagGroupIds: [String], $tagKeys: [String], $fromDate: String!, $locationKey: String) {
+    postsFeed(tagGroupIds: $tagGroupIds, tagKeys: $tagKeys, fromDate: $fromDate, locationKey: $locationKey) {
+        hasMoreItems,
+        items {
+            id
+            url
+            group {
+                id
+                name
+                groupPhotoUrl
+            }
+            description
+            creationDate
+            photoAttachmentUrls
+        }
+    }
+}

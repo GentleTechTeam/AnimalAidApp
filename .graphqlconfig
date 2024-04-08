@@ -1,0 +1,12 @@
+{
+  "name": "Schema",
+  "schemaPath": "lib/common/api/__gql_smm_wrapper_service_scheme__/smm_wrapper_service.graphql",
+  "extensions": {
+    "endpoints": {
+      "Default": {
+        "url": "http://localhost:1234/",
+        "introspect": false
+      }
+    }
+  }
+}

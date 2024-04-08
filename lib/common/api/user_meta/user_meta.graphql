@@ -1,0 +1,5 @@
+query UserMeta($token: String!) {
+    userMeta(token: $token) {
+        isAdmin
+    }
+}

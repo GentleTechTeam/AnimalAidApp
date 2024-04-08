@@ -1,0 +1,2 @@
+app_identifier("com.gentletech.animalaidapp") # The bundle identifier of our app
+apple_id("gentletechteam@gmail.com") # Apple email address from which app is being published

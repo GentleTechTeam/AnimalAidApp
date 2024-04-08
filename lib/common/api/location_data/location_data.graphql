@@ -1,0 +1,29 @@
+query GenerateLocationData($lat: Float!, $lon: Float!) {
+    locationData(latitude: $lat, longitude: $lon) {
+        key,
+        label,
+        keyType,
+    }
+}
+
+query RefreshLocationData(
+    $position: GeoPositionInput,
+    $currentLocationData: LocationDataInput!,
+) {
+    refreshedLocationData(payload: {
+        position: $position,
+        currentLocationData: $currentLocationData,
+    }) {
+        key,
+        label,
+        keyType,
+    }
+}
+
+query SearchLocations($query: String!) {
+    locations(query: $query) {
+        key,
+        keyType,
+        label,
+    }
+}

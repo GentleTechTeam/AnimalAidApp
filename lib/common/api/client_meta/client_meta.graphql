@@ -1,0 +1,7 @@
+query ClientMeta($appVersion: String!) {
+    mobileClientMeta(version: $appVersion) {
+        isActual
+        clientUpdateUrlIos
+        clientUpdateUrlAndroid
+    }
+}

@@ -1,0 +1,47 @@
+PODS:
+  - Flutter (1.0.0)
+  - geolocator_apple (1.2.0):
+    - Flutter
+  - integration_test (0.0.1):
+    - Flutter
+  - package_info (0.0.1):
+    - Flutter
+  - shared_preferences (0.0.1):
+    - Flutter
+  - url_launcher (0.0.1):
+    - Flutter
+
+DEPENDENCIES:
+  - Flutter (from `Flutter`)
+  - geolocator_apple (from `.symlinks/plugins/geolocator_apple/ios`)
+  - integration_test (from `.symlinks/plugins/integration_test/ios`)
+  - package_info (from `.symlinks/plugins/package_info/ios`)
+  - shared_preferences (from `.symlinks/plugins/shared_preferences/ios`)
+  - url_launcher (from `.symlinks/plugins/url_launcher/ios`)
+
+
+EXTERNAL SOURCES:
+  Flutter:
+    :path: Flutter
+  geolocator_apple:
+    :path: ".symlinks/plugins/geolocator_apple/ios"
+  integration_test:
+    :path: ".symlinks/plugins/integration_test/ios"
+  package_info:
+    :path: ".symlinks/plugins/package_info/ios"
+  shared_preferences:
+    :path: ".symlinks/plugins/shared_preferences/ios"
+  url_launcher:
+    :path: ".symlinks/plugins/url_launcher/ios"
+
+SPEC CHECKSUMS:
+  Flutter: 50d75fe2f02b26cc09d224853bb45737f8b3214a
+  geolocator_apple: b741765c55dc21950e3e106e8b3584e55cf81ce5
+  integration_test: a1e7d09bd98eca2fc37aefd79d4f41ad37bdbbe5
+  package_info: 873975fc26034f0b863a300ad47e7f1ac6c7ec62
+  shared_preferences: af6bfa751691cdc24be3045c43ec037377ada40d
+  url_launcher: 6fef411d543ceb26efce54b05a0a40bfd74cbbef
+
+PODFILE CHECKSUM: 124871c13717f2388253dcfb709d8627f84a282d
+
+COCOAPODS: 1.11.2

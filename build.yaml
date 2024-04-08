@@ -1,0 +1,15 @@
+targets:
+  $default:
+    builders:
+      ferry_generator|graphql_builder:
+        enabled: true
+        options:
+          schema: animal_aid_app|lib/common/api/__gql_smm_wrapper_service_scheme__/smm_wrapper_service.graphql
+
+      ferry_generator|serializer_builder:
+        enabled: true
+        options:
+          schema: animal_aid_app|lib/common/api/__gql_smm_wrapper_service_scheme__/smm_wrapper_service.graphql
+      reflectable:
+        generate_for:
+          - test/hive_adapter_type_id_test.dart

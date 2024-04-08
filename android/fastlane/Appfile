@@ -1,0 +1,2 @@
+json_key_file("pc-api-8001975366575556685-777-9b62e1d6741a.json") # Path to the json secret file
+package_name("com.gentletech.animalaidapp")

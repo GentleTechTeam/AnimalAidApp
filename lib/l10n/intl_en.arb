@@ -1,0 +1,144 @@
+{
+    "withoutLocation": "Without location",
+    "enterLocationName": "Enter location name",
+    "emptySearchDataMessage": "Nothing found. Try to change the query",
+    "errorMessage": "Oops, something went wrong,\ntry again later",
+    "noDataMessage": "There's nothing here yet,\ntry again later",
+    "chooseLanguage": "Choose language",
+    "cancel": "Cancel",
+    "ok": "OK",
+    "language": "Language",
+    "privacyPolicy": "Privacy policy",
+    "writeUs": "Write us",
+    "linkNotSupported": "Link is not supported on your device",
+    "systemDefaultTheme": "system default",
+    "lightTheme": "light",
+    "darkTheme": "dark",
+    "theme": "Theme",
+    "chooseTheme": "Choose theme",
+    "myRequests": "My requests",
+    "groupsRegistration": "communities registration",
+    "noGroupsAvailable": "No communities available for management.\nTry log in with a different account.",
+    "errorWhileLoading": "An error occurred while loading",
+    "sendingRequest": "Sending the request…",
+    "myGroups": "My communities",
+    "management": "management",
+    "groupsManagement": "Groups management",
+    "noApprovedGroups": "Seems like you don't have any approved groups",
+    "changingGroupLocation": "Changing group location",
+    "changingLocationFailure": "Failed to change location",
+    "location": "Location",
+    "notSet": "Not set",
+    "posts": "Posts",
+    "post": "Post",
+    "automation": "Automation",
+    "incomingRequests": "Incoming requests",
+    "groupsApproval": "groups approval",
+    "requestsHandling": "Requests handling",
+    "noRequests": "No requests",
+    "noPostsAvailable": "No posts available in this group",
+    "saving": "Saving...",
+    "savedSuccessfully": "Saved successfully",
+    "savingError": "An error occurred while saving",
+    "hintError": "Failed to load hint text",
+    "noFavoriteTags": "No favorite tags",
+    "noTagsLoadedError": "Oops, something went wrong and the tags were not loaded",
+    "emptyFavoritePostsList": "Seem like you don't have any favorite posts",
+    "favoritePostsAppBarName": "Favorite posts",
+    "favoritePostMenuTitleName": "Favorites",
+    "favoritePostMenuSubtitleName": "favorite posts",
+    "logout": "Log out",
+    "geolocationUnavailable": "Geolocation unavailable",
+    "enableAccessInSettings": "Please enable access in settings",
+    "openSettings": "Open settings",
+    "continueMessage": "Continue",
+    "locationAccessFailure": "Failed to access location",
+    "noMailAppError": "Oops, seems like you don't have an email app installed",
+    "noPhoneAppError": "Oops, seems like you don't have a phone app installed",
+    "noWebBrowserAppError": "Oops, seems like you don't have a web browser installed",
+    "readMore": "Read more",
+    "imageCount": "Image {imageIndex} of {countOfImages}",
+    "@imageCount": {
+        "placeholders": {
+            "imageIndex": {
+                "type": "int"
+            },
+            "countOfImages": {
+                "type": "int"
+            }
+        }
+    },
+    "guest": "Guest",
+    "loading": "Loading…",
+    "active": "Active",
+    "notActive": "Not active",
+    "statusReceivingError": "Status receiving error",
+    "postsAutoImport": "Posts auto import",
+    "availableTags": "Available tags",
+    "close": "Close",
+    "addingTag": "Adding tag\n{tag}",
+    "@addingTag": {
+        "placeholders": {
+            "tag": {
+                "type": "String"
+            }
+        }
+    },
+    "addingTagError": "Unable to add tag",
+    "deletingTag": "Deleting tag\n{tag}",
+    "@deletingTag": {
+        "placeholders": {
+            "tag": {
+                "type": "String"
+            }
+        }
+    },
+    "deletingTagError": "Unable to delete tag",
+    "save": "Save",
+    "unselectEverything": "Unselect everything",
+    "selectEverything": "Select everything",
+    "mainTagsDisclaimer": "Add favorite tags to your posts to allow users to filter your community content in the shared feed",
+    "favoriteTags": "Favorite tags",
+    "options": "Options: ",
+    "awaitsConfirmation": "awaits confirmation",
+    "requestDeclined": "request declined",
+    "updateRequired": "Update required",
+    "outdatedVersionMessage": "You seem to have an outdated version of the app installed",
+    "jumpToTheUpdate": "Jump to the update",
+    "animalAidApp": "AnimalAidApp",
+    "welcomeMessage": "Welcome to the Animal Shelter Assistance Platform",
+    "beFirstToKnow": "Be first to know",
+    "dataOnSheltersMessage": "The app contains data on shelters in your city",
+    "convenientFilter": "Convenient filter by city",
+    "infoAboutSheltersMessage": "Enter your city and get up-to-date information about shelters in your area",
+    "skip": "Skip",
+    "doNotAskAgain": "Don't ask again",
+    "improvementOfTheFeed": "Improvement of the feed",
+    "postsByLocalityMessage": "To filter publications by location, you can use geo position",
+    "noThankYou": "No, thank you",
+    "unableToRecoverLocationData": "We were unable to recover location data",
+    "determiningApproxLocation": "Determining the approximate location",
+    "settlementEstablished": "Settlement established\n{settlement}",
+    "@settlementEstablished": {
+        "placeholders": {
+            "settlement": {
+                "type": "String"
+            }
+        }
+    },
+    "failedToLocateError": "Failed to locate",
+    "actionsWithPost": "Actions with post",
+    "report": "Report",
+    "availableOnlyToAuthorizedUsers": "The action is available only to authorized users",
+    "execError": "An error occurred during execution. \n Try again",
+    "reportWillBeReviewed": "Your complaint will be reviewed by a moderator",
+    "shelterPosts": "Shelter posts",
+    "all": "All",
+    "authError": "Authorization error",
+    "tryAgain": "Try again",
+    "backToAuth": "Back to authorization",
+    "authCompleted": "Authorization completed",
+    "emptyFavoritePost": "This post might be missing,\ntry again later",
+    "addToFavorites": "Add to favorites",
+    "removeFromFavorites": "Remove from favorites"
+}

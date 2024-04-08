@@ -1,0 +1,130 @@
+include: package:flutter_lints/flutter.yaml
+
+analyzer:
+  exclude:
+    - "build/**"
+    - "*/**/*.gql.dart"
+    - "*/**/*.g.dart"
+    - "lib/*.reflectable.dart"
+    - "test/*.reflectable.dart"
+    - "lib/generated/**"
+  strong-mode:
+    implicit-casts: false
+    implicit-dynamic: false
+  plugins:
+    - dart_code_metrics
+
+linter:
+  rules:
+    - avoid_dynamic_calls
+    - always_put_control_body_on_new_line
+    - avoid_multiple_declarations_per_line
+    - avoid_unused_constructor_parameters
+    - parameter_assignments
+    - unnecessary_await_in_return
+    - prefer_expression_function_bodies
+    - prefer_foreach
+    - avoid_void_async
+    - cascade_invocations
+    - avoid_positional_boolean_parameters
+    - avoid_redundant_argument_values
+    - always_declare_return_types
+    - prefer_single_quotes
+    - unawaited_futures
+
+dart_code_metrics:
+  metrics:
+    cyclomatic-complexity: 30
+    halstead-volume: 1500
+    lines-of-code: 200
+    maintainability-index: 20
+    maximum-nesting-level: 6
+    number-of-methods: 20
+    number-of-parameters: 4
+    source-lines-of-code: 100
+  metrics-exclude:
+    - test/**
+    - integration_test/**
+    - lib/generated/**
+  rules:
+    - avoid-collection-methods-with-unrelated-types
+    - avoid-dynamic
+    - avoid-global-state
+    - avoid-ignoring-return-values
+    - avoid-late-keyword
+    - avoid-missing-enum-constant-in-map
+    - avoid-nested-conditional-expressions:
+        acceptable-level: 2
+    - avoid-non-null-assertion
+    - avoid-throw-in-catch-block
+    - avoid-unnecessary-type-assertions
+    - avoid-unnecessary-type-casts
+    - avoid-unrelated-type-assertions
+    - avoid-unused-parameters
+    - binary-expression-operand-order
+    - double-literal-format
+    - format-comment
+    - member-ordering:
+        alphabetize: false
+        order:
+          - public-fields
+          - private-fields
+          - constructors
+          - public-getters
+          - public-setters
+          - public-methods
+          - private-getters
+          - private-setters
+          - private-methods
+    - newline-before-return
+    - no-boolean-literal-compare
+    - no-empty-block
+    - no-equal-arguments:
+        ignored-parameters:
+          - width
+          - height
+          - top
+          - right
+          - bottom
+          - left
+    - no-equal-then-else
+    - no-magic-number
+    - no-object-declaration
+    - prefer-async-await
+    - prefer-conditional-expressions
+    - prefer-correct-identifier-length:
+        exceptions: ['en', 'id', 'to' ]
+        min-identifier-length: 3
+        max-identifier-length: 40
+    - prefer-correct-type-name:
+        exclude: [ 'id' ]
+        min-length: 3
+        max-length: 40
+    - prefer-first
+    - prefer-immediate-return
+    - prefer-last
+    - prefer-match-file-name:
+        exclude:
+          - test/**
+          - integration_test/**
+          - lib/generated/**
+          - lib/**/__stories__/**
+    - prefer-moving-to-variable
+    - prefer-trailing-comma:
+        break-on: 4
+    - always-remove-listener
+    - avoid-border-all
+    - avoid-returning-widgets
+    - avoid-unnecessary-setstate
+    - avoid-wrapping-in-padding
+    - prefer-const-border-radius
+    - prefer-extracting-callbacks
+    - prefer-single-widget-per-file:
+        ignore-private-widgets: true
+  rules-exclude:
+    - test/**
+    - integration_test/**
+    - lib/generated/**
+  anti-patterns:
+    - long-method
+    - long-parameter-list

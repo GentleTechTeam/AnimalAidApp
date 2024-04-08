@@ -1,0 +1,12 @@
+query GroupApprovalRequests($token: String!) {
+    charityGroupsWaitingForApproval(token: $token) {
+        id
+        name
+        groupUrl
+        groupPhotoUrl
+    }
+}
+
+mutation MakeApprovalDecision($token: String!, $groupId: String!, $approve: Boolean!) {
+    makeCharityGroupApprovalDecision(token: $token, groupId: $groupId, approve: $approve)
+}

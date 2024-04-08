@@ -1,0 +1,14 @@
+query Post($groupId: String!, $postId: String!) {
+    postsFeedItem(groupId: $groupId, postId: $postId) {
+        id
+        url
+        group {
+          id
+          name
+          groupPhotoUrl
+        }
+        creationDate
+        description
+        photoAttachmentUrls
+    }
+}

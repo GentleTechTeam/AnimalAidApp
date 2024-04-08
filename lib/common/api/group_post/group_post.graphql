@@ -1,0 +1,38 @@
+query GroupPosts($token: String!, $groupId: String!, $skip: Int, $first: Int) {
+    groupPosts(token: $token, groupId: $groupId, skip: $skip, first: $first ) {
+        items {
+            id
+            creationDate
+            description
+            photoAttachmentUrls
+            published
+            assignedTags
+        }
+    }
+}
+
+mutation TogglePostsInFeed($token: String!, $payload: [TogglePostsInFeedPayload]!) {
+    togglePostsInFeed(payload: $payload, token: $token )
+}
+
+mutation AssignTagToApprovedPost($token: String!, $groupId: String!, $postId: String!, $tag: String!) {
+    assignTagToApprovedPost(token: $token, groupId: $groupId, postId: $postId, tag: $tag ) {
+        id
+        creationDate
+        description
+        photoAttachmentUrls
+        published
+        assignedTags
+    }
+}
+
+mutation DeleteTagFromApprovedPost($token: String!, $groupId: String!, $postId: String!, $tag: String!) {
+    deleteTagFromApprovedPost(token: $token, groupId: $groupId, postId: $postId, tag: $tag ) {
+        id
+        creationDate
+        description
+        photoAttachmentUrls
+        published
+        assignedTags
+    }
+}
