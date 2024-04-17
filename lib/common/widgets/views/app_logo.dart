@@ -1,17 +1,25 @@
 import 'package:flutter/material.dart';
 
 class AppLogo extends StatelessWidget {
-  const AppLogo({Key? key}) : super(key: key);
+  final Size logoSize;
+  final String imagePath;
+  final Color backgroundColor;
+  const AppLogo({
+    Key? key,
+    this.logoSize = const Size(300, 300),
+    this.imagePath = 'assets/images/logo_with_text.png',
+    this.backgroundColor = Colors.white,
+  }) : super(key: key);
   @override
   Widget build(BuildContext context) => Container(
-        decoration: const BoxDecoration(
+        decoration: BoxDecoration(
           shape: BoxShape.circle,
-          color: Colors.white,
+          color: backgroundColor,
         ),
         child: Image.asset(
-          'assets/images/logo_with_text.png',
-          width: 300,
-          height: 300,
+          imagePath,
+          width: logoSize.width,
+          height: logoSize.height,
         ),
       );
 }
