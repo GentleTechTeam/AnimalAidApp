@@ -1,4 +1,19 @@
 # Animal Aid App
+<div align="center">
+  <img src="https://github.com/GentleTechTeam/AnimalAidApp/assets/165633483/5c2f5885-e70f-409e-9f23-147ccedd3afe" alt="Animal Aid App" width="400" height="400">
+</div>
+
+
+<table>
+  <tr>
+    <td><img src="https://github.com/GentleTechTeam/AnimalAidApp/assets/165633483/7f894a1d-83b6-4721-8278-134270492ec6" alt="Posts feed" width="300"></td>
+    <td><img src="https://github.com/GentleTechTeam/AnimalAidApp/assets/165633483/3ce28282-ea8a-44f8-af73-0971898636a6" alt="App Drawer" width="300"></td>
+    <td><img src="https://github.com/GentleTechTeam/AnimalAidApp/assets/165633483/630a3c60-953b-44f8-925a-78799ced9a66" alt="Onboarding" width="300"></td>
+  </tr>
+</table>
+
+
+
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 
 Since all applications developed by our team are under NDA with clients, we can showcase the first non-commercial project of our team, the Animal Aid App.
