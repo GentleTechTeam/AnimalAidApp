@@ -35,7 +35,7 @@ class PostsFeedServiceMock extends PostsFeedService {
         'https://images.freeimages.com/images/large-previews/957/street-dog-1570987.jpg?fmt=webp&h=350',
       );
 
-    final groupBuilder3 = GPostsFeedData_postsFeed_items_groupBuilder()
+    final thirdPostGroupBuilder = GPostsFeedData_postsFeed_items_groupBuilder()
       ..id = '1'
       ..name = 'Cozy Critters'
       ..groupPhotoUrl =
@@ -77,7 +77,7 @@ class PostsFeedServiceMock extends PostsFeedService {
             ..description =
                 "Whether they're curling up beside us for a nap or greeting us with excited tail wags, pets have an incredible ability to make us feel loved and cherished, no matter what."
             ..G__typename = 'Post'
-            ..group = groupBuilder3
+            ..group = thirdPostGroupBuilder
             ..url = 'https://www.google.com'
             ..photoAttachmentUrls = thirdPostPhotoUrlBuilder
             ..creationDate = '2021-09-01T02:00:00Z',
