@@ -1,20 +1,13 @@
 # Animal Aid App
-<div align="center">
-  <img src="https://github.com/GentleTechTeam/AnimalAidApp/assets/165633483/5c2f5885-e70f-409e-9f23-147ccedd3afe" alt="Animal Aid App" width="400" height="400">
-</div>
-
-
-<table>
-  <tr>
-    <td><img src="https://github.com/GentleTechTeam/AnimalAidApp/assets/165633483/7f894a1d-83b6-4721-8278-134270492ec6" alt="Posts feed" width="300"></td>
-    <td><img src="https://github.com/GentleTechTeam/AnimalAidApp/assets/165633483/3ce28282-ea8a-44f8-af73-0971898636a6" alt="App Drawer" width="300"></td>
-    <td><img src="https://github.com/GentleTechTeam/AnimalAidApp/assets/165633483/630a3c60-953b-44f8-925a-78799ced9a66" alt="Onboarding" width="300"></td>
-  </tr>
-</table>
-
-
-
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
+
+<p float="left">
+    <img src="https://github.com/GentleTechTeam/AnimalAidApp/assets/165633483/89c8f66e-0ae2-4356-a868-fb21d60056f6" alt="Posts feed" width="250">
+    <img src="https://github.com/GentleTechTeam/AnimalAidApp/assets/165633483/19f0b9d2-e0ce-447c-b1bd-430a3f9ee0e3" alt="App Drawer" width="250">
+    <img src="https://github.com/GentleTechTeam/AnimalAidApp/assets/165633483/125237a6-7d0b-4a5e-ae97-a0ca98a615b9" alt="Onboarding" width="250">
+</p>
+
+### See [web demo](https://gentletechteam.github.io/AnimalAidApp/)
 
 Since all applications developed by our team are under NDA with clients, we can showcase the first non-commercial project of our team, the Animal Aid App.
 
