@@ -4,21 +4,19 @@ import 'package:get_it/get_it.dart';
 
 class BuildEnvBanner extends StatelessWidget {
   final configuration = GetIt.I<ConfigurationService>();
-  final Widget? child;
+  final Widget child;
 
   BuildEnvBanner({
     Key? key,
     required this.child,
   }) : super(key: key);
 
-  static Widget builder(Widget? child) => BuildEnvBanner(child: child);
-
   @override
   Widget build(BuildContext context) {
     final buildEnv = configuration.buildEnv;
 
     if (buildEnv.isEmpty) {
-      return child ?? const SizedBox.shrink();
+      return child;
     }
 
     return Banner(

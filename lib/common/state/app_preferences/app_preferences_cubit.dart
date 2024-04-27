@@ -1,3 +1,4 @@
+import 'package:animal_aid_app/common/constants/runtime_environment.dart';
 import 'package:animal_aid_app/common/constants/supported_locale.dart';
 import 'package:animal_aid_app/common/extensions/supported_locale_extension.dart';
 import 'package:animal_aid_app/common/state/app_preferences/app_preferences_state.dart';
@@ -33,7 +34,11 @@ class AppPreferencesCubit extends Cubit<AppPreferencesState> {
 
   Future<void> restoreLocale() async {
     String? savedLocaleName = await LocalePreferences.get();
-    savedLocaleName ??= await intl_standalone.findSystemLocale();
+
+    /// On the  intl 0.17.0 version, the findSystemLocale() method is not working on the web.
+    savedLocaleName ??= RuntimeEnvironment.isWeb
+        ? 'en_US'
+        : await intl_standalone.findSystemLocale();
 
     emit(
       state.copyWith(

@@ -2,8 +2,8 @@
 
 part of 'package:animal_aid_app/common/styles/theme.dart';
 
-const _appColorCode = 0xFF3D5D57;
-const _appAccentColorCode = 0xFFf7c961;
+const _appColorCode = 0xFF007FEB;
+const _appAccentColorCode = 0xFFF38888;
 const _activeColorBlueChannelValue = 200;
 
 // ignore: prefer-match-file-name
