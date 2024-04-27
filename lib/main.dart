@@ -24,7 +24,7 @@ Future<void> main() async {
     ..userInteractions = false
     ..dismissOnTap = false;
 
-  timeago.setLocaleMessages('en_EN', timeago.EnMessages());
+  timeago.setLocaleMessages('en_US', timeago.EnMessages());
 
   // ignore: avoid-ignoring-return-values
   WidgetsFlutterBinding.ensureInitialized();

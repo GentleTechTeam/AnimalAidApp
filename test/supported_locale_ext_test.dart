@@ -5,9 +5,9 @@ import 'package:flutter_test/flutter_test.dart';
 void main() {
   group('SupportedLocaleExtension test', () {
     group('fromLocaleName method test', () {
-      test('Convert "en_US" locale', () {
+      test('Convert "en" locale', () {
         expect(
-          SupportedLocaleExtension.fromLocaleName('en_US'),
+          SupportedLocaleExtension.fromLocaleName('en'),
           SupportedLocale.en,
         );
       });
