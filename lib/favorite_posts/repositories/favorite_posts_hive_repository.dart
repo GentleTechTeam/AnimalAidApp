@@ -21,6 +21,7 @@ class FavoritePostsHiveRepository implements FavoritePostsRepository {
   Future<void> addPostToFavorites(PostMeta post) async {
     final box = await _favoritePostsBox;
 
+    // ignore: avoid-ignoring-return-values
     await box.add(post.toHivePostMeta());
   }
 

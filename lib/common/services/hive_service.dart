@@ -12,6 +12,7 @@ class HiveService {
     );
 
     if (!Hive.isBoxOpen(boxName.name)) {
+      // ignore: avoid-ignoring-return-values
       await Hive.openBox<T>(boxName.name);
     }
 

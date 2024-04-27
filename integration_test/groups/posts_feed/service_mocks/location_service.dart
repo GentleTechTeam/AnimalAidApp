@@ -6,7 +6,7 @@ const mockInitialLocationKey = 'initialLocationKey';
 final initialLocationRestorationResult = LocationRestorationResult(
   status: LocationRestorationStatus.restored,
   location: Location(
-    locationData: LocationData(
+    locationData: const LocationData(
       key: mockInitialLocationKey,
       label: mockInitialLocationLabel,
       keyType: 'MOCK_LOCATION_KEY_TYPE',

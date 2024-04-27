@@ -2,16 +2,16 @@ import 'dart:math';
 
 import 'package:animal_aid_app/common/constants/tag_key_mock.dart';
 import 'package:animal_aid_app/posts_feed/services/posts_feed_service.dart';
-import 'package:animal_aid_app/posts_feed/services/posts_generator.dart';
+import 'package:animal_aid_app/posts_feed/utils/posts_generator.dart';
 import 'package:built_collection/built_collection.dart';
 
-const maxDelay = 1000;
-const minDelay = 500;
-const defaultPostsCount = 10;
-
 class PostsFeedServiceMock extends PostsFeedService {
-  var lastTag = 'all';
-  var lastId = 0;
+  static const _maxDelay = 1000;
+  static const _minDelay = 500;
+  static const _defaultPostsCount = 10;
+
+  var _lastTag = 'all';
+  var _lastId = 0;
 
   @override
   Future<PostsFeedResponse> getData({
@@ -24,28 +24,27 @@ class PostsFeedServiceMock extends PostsFeedService {
 
     await Future<void>.delayed(
       Duration(
-        milliseconds: minDelay + random.nextInt(maxDelay),
+        milliseconds: _minDelay + random.nextInt(_maxDelay),
       ),
     );
 
-    final postsGenerator = PostsGenerator();
     final tagKeyMock = tagKey == null
         ? TagKeyMock.cute
         : TagKeyMock.values
             .firstWhere((element) => element.toString() == tagKey);
 
-    final posts = postsGenerator.generate(
-      count: defaultPostsCount,
+    final posts = PostsGenerator.generate(
+      count: _defaultPostsCount,
       tagKeyMock: tagKeyMock,
-      lastId: lastId,
+      lastId: _lastId,
     );
 
-    if (lastTag != tagKey && tagKey != null) {
-      lastTag = tagKey;
-      lastId = 0;
+    if (_lastTag != tagKey && tagKey != null) {
+      _lastTag = tagKey;
+      _lastId = 0;
     }
 
-    lastId += posts.length;
+    _lastId += posts.length;
 
     return PostsFeedResponse(
       data: posts.toBuiltList(),

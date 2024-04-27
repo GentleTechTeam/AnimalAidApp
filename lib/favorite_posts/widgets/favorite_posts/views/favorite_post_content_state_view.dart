@@ -25,15 +25,13 @@ class FavoritePostContentStateView extends StatelessWidget {
     final post = data;
 
     if (loadingStatus == LoadingStatus.loading) {
-      return _buildFavoriteContentStateViewCard(
-        context: context,
-        child: const CircularProgressIndicator(),
+      return const _ContentStateViewCard(
+        child: CircularProgressIndicator(),
       );
     }
 
     if (post == null) {
-      return _buildFavoriteContentStateViewCard(
-        context: context,
+      return _ContentStateViewCard(
         child: IconInfo(
           text: emptyDataMessage,
           icon: Icons.warning,
@@ -43,11 +41,17 @@ class FavoritePostContentStateView extends StatelessWidget {
 
     return builder(post);
   }
+}
 
-  Widget _buildFavoriteContentStateViewCard({
-    required BuildContext context,
-    required Widget child,
-  }) {
+class _ContentStateViewCard extends StatelessWidget {
+  final Widget child;
+
+  const _ContentStateViewCard({
+    required this.child,
+  });
+
+  @override
+  Widget build(BuildContext context) {
     final AppTheme appTheme = AppTheme.watch(context);
 
     return CustomCard(

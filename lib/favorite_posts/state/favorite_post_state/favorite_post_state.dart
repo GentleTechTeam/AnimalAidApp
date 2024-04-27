@@ -16,7 +16,6 @@ class FavoritePostState {
 
   FavoritePostState copyWith({
     GPostData_postsFeedItem? post,
-    bool? isFavorite,
     LoadingStatus? loadingStatus,
   }) =>
       FavoritePostState(
