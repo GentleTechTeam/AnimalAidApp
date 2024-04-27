@@ -1,10 +1,7 @@
-import 'dart:developer';
-
 import 'package:animal_aid_app/common/api/index.dart';
-import 'package:animal_aid_app/common/constants/runtime_environment.dart';
 import 'package:ferry/ferry.dart';
 import 'package:get_it/get_it.dart';
-import 'package:package_info/package_info.dart';
+import 'package:package_info_plus/package_info_plus.dart';
 
 class AppInfoService {
   final Client _gqlClient = GetIt.I<Client>();
@@ -28,25 +25,9 @@ class AppInfoService {
   }
 
   Future<String> getPackageVersion() async {
-    if (RuntimeEnvironment.isWeb) {
-      _logPackageInfoNotSupported();
-
-      return 'web';
-    }
-
-    if (RuntimeEnvironment.isLinux) {
-      _logPackageInfoNotSupported();
-
-      return 'linux';
-    }
-
     final packageInfo = await PackageInfo.fromPlatform();
 
     return packageInfo.version;
-  }
-
-  void _logPackageInfoNotSupported() {
-    log('Platform is not currently supported for gathering package info');
   }
 }
 

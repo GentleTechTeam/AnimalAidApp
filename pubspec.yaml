@@ -20,7 +20,7 @@ dependencies:
   intl: 0.17.0
   get_it: 7.2.0
   fluro: 2.0.3
-  package_info: 2.0.2
+  package_info_plus: 4.0.0
   flutter_bloc: 8.0.1
   url_launcher: 6.0.20
   flutter_displaymode: 0.6.0
