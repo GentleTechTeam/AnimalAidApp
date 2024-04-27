@@ -37,6 +37,7 @@ class GroupPostsAutoImportControlView extends StatelessWidget {
             AutoImportStatusIndicator(status: loadingStatus),
             Switch.adaptive(
               value: isEnabled,
+              activeColor: Theme.of(context).primaryColor,
               onChanged: !isEnabled && loadingStatus != LoadingStatus.loading
                   ? (_nextStatus) => onEnable()
                   : null,
