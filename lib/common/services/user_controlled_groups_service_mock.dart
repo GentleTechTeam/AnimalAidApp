@@ -30,9 +30,13 @@ class UserControlledGroupsServiceMock extends UserControlledGroupsService {
   }) async =>
       GUserControlledGroupsData_userControlledGroups(
         (b) => b
-          ..id = groupId
-          ..name = 'First group'
-          ..approvalStatus = _i2.GCharityGroupApprovalStatus.APPROVED,
+          ..G__typename = 'CharityGroup'
+          ..id = '1'
+          ..name = 'Cozy Critters'
+          ..approvalStatus = _i2.GCharityGroupApprovalStatus.APPROVED
+          ..groupPhotoUrl =
+              'https://images.freeimages.com/images/large-previews/537/dog-1550881.jpg?fmt=webp&h=350'
+          ..autoImportSettingsAccessible = true,
       );
 
   @override
@@ -43,8 +47,12 @@ class UserControlledGroupsServiceMock extends UserControlledGroupsService {
   }) async =>
           GUserControlledGroupsData_userControlledGroups(
             (b) => b
-              ..id = groupId
-              ..name = 'First group'
-              ..approvalStatus = _i2.GCharityGroupApprovalStatus.APPROVED,
+              ..G__typename = 'CharityGroup'
+              ..id = '1'
+              ..name = 'Cozy Critters'
+              ..approvalStatus = _i2.GCharityGroupApprovalStatus.APPROVED
+              ..groupPhotoUrl =
+                  'https://images.freeimages.com/images/large-previews/537/dog-1550881.jpg?fmt=webp&h=350'
+              ..autoImportSettingsAccessible = true,
           );
 }

@@ -181,7 +181,7 @@ class LocationData {
   final String keyType;
   final String label;
 
-  LocationData({
+  const LocationData({
     required this.key,
     required this.keyType,
     required this.label,

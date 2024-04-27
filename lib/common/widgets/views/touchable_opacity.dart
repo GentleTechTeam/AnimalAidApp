@@ -67,7 +67,7 @@ class _TouchableOpacityState extends State<TouchableOpacity>
     );
   }
 
-  Duration get _animationDuration => AppTheme.read(context).timing.fast;
+  Duration get _animationDuration => AppTheme.read(context).timing.medium;
 
   void _playAnimation(double value) {
     final appTheme = AppTheme.read(context);
