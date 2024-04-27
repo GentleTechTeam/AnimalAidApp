@@ -10,6 +10,7 @@ import 'package:animal_aid_app/common/state/user_meta/user_meta_cubit.dart';
 import 'package:animal_aid_app/common/styles/theme.dart';
 import 'package:animal_aid_app/common/widgets/build_env_banner.dart';
 import 'package:animal_aid_app/common/widgets/refresh_rate_updater.dart';
+import 'package:animal_aid_app/common/widgets/views/app_frame/app_frame.dart';
 import 'package:animal_aid_app/generated/l10n.dart';
 import 'package:animal_aid_app/posts_feed/screens/posts_feed_screen.dart';
 import 'package:flutter/material.dart';
@@ -65,7 +66,11 @@ class _AppState extends State<App> {
                 themeMode: state.savedThemeMode,
                 title: 'Animal Aid App',
                 builder: EasyLoading.init(
-                  builder: (_, child) => BuildEnvBanner.builder(child),
+                  builder: (_, child) => BuildEnvBanner(
+                    child: AppFrame(
+                      child: child ?? const SizedBox.shrink(),
+                    ),
+                  ),
                 ),
                 initialRoute: _initialRouteService.initialRoute,
                 onGenerateInitialRoutes: _onGenerateInitialRoutes,

@@ -1,3 +1,4 @@
+import 'package:animal_aid_app/common/styles/theme.dart';
 import 'package:flutter/material.dart';
 
 class AppLogo extends StatelessWidget {
@@ -11,15 +12,19 @@ class AppLogo extends StatelessWidget {
     this.backgroundColor = Colors.white,
   }) : super(key: key);
   @override
-  Widget build(BuildContext context) => Container(
-        decoration: BoxDecoration(
-          shape: BoxShape.circle,
-          color: backgroundColor,
-        ),
-        child: Image.asset(
-          imagePath,
-          width: logoSize.width,
-          height: logoSize.height,
-        ),
-      );
+  Widget build(BuildContext context) {
+    final theme = AppTheme.watch(context);
+
+    return Container(
+      decoration: BoxDecoration(
+        shape: BoxShape.circle,
+        color: theme.colors.withStrongOpacity(backgroundColor),
+      ),
+      child: Image.asset(
+        imagePath,
+        width: logoSize.width,
+        height: logoSize.height,
+      ),
+    );
+  }
 }
