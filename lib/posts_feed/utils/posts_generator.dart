@@ -5,21 +5,11 @@ import 'package:animal_aid_app/common/constants/tag_key_mock.dart';
 import 'package:built_collection/built_collection.dart';
 
 abstract class PostsGenerator {
-  static const _picHostingKeyWords = [
-    'dog',
-    'cat',
-    'animal',
-    'pet',
-    'puppy',
-    'kitten',
-  ];
-  static const _randomPicUrl = 'https://source.unsplash.com/random/';
-  static const _defaultPostPicSize = '900x600';
+  static const _randomPicUrl = 'https://picsum.photos/900/600';
   static const _defaultPostUrl = 'https://www.google.com';
   static const _defaultPostType = 'Post';
   static const _defaultGroupType = 'PostGroup';
   static const _maxPostsPicCount = 3;
-  static const _maxPicHostingKeyWords = 6;
 
   static List<GPostsFeedData_postsFeed_items> generate({
     required int count,
@@ -68,12 +58,7 @@ abstract class PostsGenerator {
     final picUrls = <String>[];
 
     for (var index = 0; index < maxPhotos; index++) {
-      final keywordsCount = random.nextInt(_maxPicHostingKeyWords) + 1;
-      var selectedWords = List<String>.from(_picHostingKeyWords)..shuffle();
-      selectedWords = selectedWords.take(keywordsCount).toList();
-      picUrls.add(
-        '$_randomPicUrl/$_defaultPostPicSize/?${selectedWords.join(',')}?$postIndex${tagKeyMock.name}$index',
-      );
+      picUrls.add('$_randomPicUrl?$postIndex$index');
     }
 
     return ListBuilder<String>(picUrls);
@@ -95,8 +80,7 @@ abstract class PostsGenerator {
     return GPostsFeedData_postsFeed_items_groupBuilder()
       ..id = randomGroup.id
       ..name = randomGroup.name
-      ..groupPhotoUrl =
-          '$_randomPicUrl/$_defaultPostPicSize/?dog,cat?$postIndex$tagKey'
+      ..groupPhotoUrl = '$_randomPicUrl?$postIndex$tagKey'
       ..G__typename = _defaultGroupType;
   }
 }
